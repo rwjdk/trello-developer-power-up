@@ -131,3 +131,7 @@ dist
 
 .parcel-cache
 dist
+/src/.vs/src/FileContentIndex
+/src/.vs/src/config
+/src/.vs/src/v17
+/src/.vs

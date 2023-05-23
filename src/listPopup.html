@@ -1,0 +1,20 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://p.trellocdn.com/power-up.min.css" />
+    <script src="https://p.trellocdn.com/power-up.min.js" crossorigin="anonymous"></script>
+    <script src="listPopup.js"></script>
+</head>
+<body>
+    <label>Copy to clipboard</label>
+    <button onclick="CopyListId()">List Id</button>
+    <button onclick="CopyJson()">List JSON</button>
+    <label for="listId">List Id</label>
+    <input type="text" id="listId" readonly>
+    <label for="listId">List as JSON (With Cards)</label>
+    <textarea type="text" id="json" rows="7" readonly></textarea>
+
+</body>
+
+</html>
