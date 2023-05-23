@@ -35,7 +35,7 @@ window.TrelloPowerUp.initialize({
         if (show) {
             return [
                 {
-                    text: 'Get List Data',
+                    text: 'Get List Id',
                     callback: btnListPopUp
                 }
             ];
@@ -48,7 +48,7 @@ window.TrelloPowerUp.initialize({
         if (show) {
             return [{
                 icon: PowerUpIcon,
-                text: 'Get Card Data',
+                text: 'Get Card Ids',
                 callback: btnCardPopUp,
                 condition: 'always'
             }];
@@ -64,7 +64,7 @@ window.TrelloPowerUp.initialize({
                     dark: PowerUpIconLight,
                     light: PowerUpIcon
                 },
-                text: 'Get Board Data',
+                text: 'Get Board Id',
                 callback: btnBoardPopUp,
                 condition: 'always'
             }];
@@ -74,7 +74,7 @@ window.TrelloPowerUp.initialize({
     },
     'show-settings': function (t) {
         return t.popup({
-            title: 'Get Technical Data Settings',
+            title: 'Get Ids Settings',
             url: 'settings.html',
             height: 110
         });
