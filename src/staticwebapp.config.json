@@ -1,6 +1,6 @@
 {
     "globalHeaders": {
-        "content-security-policy": "style-src 'self' https://p.trellocdn.com",
+        "content-security-policy": "style-src 'self' https://p.trellocdn.com 'unsafe-inline'",
         "Access-Control-Allow-Origin": "https://ambitious-moss-04a010603.3.azurestaticapps.net",
         "X-Permitted-Cross-Domain-Policies": "none",
         "Referrer-Policy": "no-referrer",
