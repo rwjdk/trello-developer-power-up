@@ -1,0 +1,11 @@
+{
+    "globalHeaders": {
+        "content-security-policy": "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src 'none' style-src 'self' https://p.trellocdn.com 'unsafe-inline'",
+        "Access-Control-Allow-Origin": "https://ambitious-moss-04a010603.3.azurestaticapps.net",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Permitted-Cross-Domain-Policies": "none",
+        "Referrer-Policy": "no-referrer",
+        "X-Content-Type-Options": "nosniff",
+        "Permissions-Policy": "autoplay=()"
+    }
+}
