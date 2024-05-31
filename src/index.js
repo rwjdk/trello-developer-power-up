@@ -1,5 +1,5 @@
-var PowerUpIcon = 'https://rwj.dk/trello/developer-power-up/power-up-icon.png';
-var PowerUpIconLight = 'https://rwj.dk/trello/developer-power-up/power-up-icon_light.png';
+var PowerUpIcon = 'https://ambitious-moss-04a010603.3.azurestaticapps.net/power-up-icon.png';
+var PowerUpIconLight = 'https://ambitious-moss-04a010603.3.azurestaticapps.net/power-up-icon_light.png';
 
 var btnListPopUp = function (t, opts) {
     return t.popup({
