@@ -1,20 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://p.trellocdn.com/power-up.min.css" />
+    <link rel="stylesheet" href="app.css">
     <script src="https://p.trellocdn.com/power-up.min.js" crossorigin="anonymous"></script>
     <script src="listPopup.js"></script>
 </head>
-<body>
-    <label>Copy to clipboard</label>
-    <button onclick="CopyListId()">List Id</button>
-    <button onclick="CopyJson()">List JSON</button>
-    <label for="listId">List Id</label>
-    <input type="text" id="listId" readonly>
-    <label for="listId">List as JSON (with Cards)</label>
-    <textarea type="text" id="json" rows="7" readonly></textarea>
 
+<body>
+    <div style="display: flex; justify-content: space-evenly; align-items: top;">
+        <label id="showList" class="heading-selected" onclick="switchView('List')">List</label>
+        <label id="showCard" class="heading" onclick="switchView('Card')">Cards</label>
+    </div>
+
+    <div id="List" style="display: block;">
+        <label for="listId">List Id</label>
+        <div style="display: flex;">
+            <input type="text" id="listId" readonly>
+            <button onclick="CopyListId()" title="Copy Id to Clipboard"><img src="copy.png" /></button>
+        </div>
+
+        <label for="listId">JSON (with <span id="numberOfCards"></span>)</label>
+        <div style="display: flex;">
+            <textarea type="text" id="json" rows="7" readonly></textarea>
+            <button onclick="CopyJson()" style="max-height: 42px;" title="Copy JSON to Clipboard"><img
+                    src="copy.png" /></button>
+        </div>
+
+        <label>List Creation Date: <span style="font-size: 11px; font-weight: normal; color: gray;"
+                id="creationDate"></span></label>
+    </div>
+
+    <div id="Card" style="display: none;">
+        <div id="noCard" style="text-align: center; font-style: italic; display: none;">
+            <div style="text-align: center; font-style: italic; margin-top: 25px; margin-bottom: 25px;">                
+                No Cards in this list
+            </div>
+        </div>
+        <!-- Dynamic Content -->
+    </div>
+
+    <a class="footer" href="https://trellotools.azurewebsites.net" target="_blank">More Free Developer Tools</a>
 </body>
 
 </html>

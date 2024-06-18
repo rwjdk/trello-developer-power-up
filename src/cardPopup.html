@@ -1,24 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://p.trellocdn.com/power-up.min.css" />
+    <link rel="stylesheet" href="app.css">
     <script src="https://p.trellocdn.com/power-up.min.js" crossorigin="anonymous"></script>
     <script src="cardPopup.js"></script>
 </head>
+
 <body>
-    <label>Copy to clipboard</label>
-    <button onclick="CopyCardId()">Card Id</button>
-    <button onclick="CopyListId()">List Id</button>
-    <button onclick="CopyBoardId()">Board Id</button>
-    <button onclick="CopyJson()">Card JSON</button>
-    <label for="cardId">Card Id</label>
-    <input type="text" id="cardId" readonly>
-    <label for="listId">List Id</label>
-    <input type="text" id="listId" readonly>
-    <label for="boardId">Board Id</label>
-    <input type="text" id="boardId" readonly>
-    <label for="listId">Card as JSON</label>
-    <textarea type="text" id="json" rows="7" readonly></textarea>
+    <div style="display: flex; justify-content: space-evenly; align-items: top;">
+        <label id="showCard" class="heading-selected" onclick="switchView('Card')">Card</label>
+        <label id="showMember" class="heading" onclick="switchView('Member')">Members</label>
+        <label id="showLabel" class="heading" onclick="switchView('Label')">Labels</label>
+        <label id="showChecklist" class="heading" onclick="switchView('Checklist')">Checklists</label>
+    </div>
+
+    <div id="Card" style="display: block;">
+        <label for="cardId">Card Id</label>
+        <div style="display: flex;">
+            <input type="text" id="cardId" readonly>
+            <button onclick="CopyCardId()" title="Copy Id to Clipboard"><img src="copy.png"></button>
+        </div>
+
+        <label for="listId">List Id</label>
+        <div style="display: flex;">
+            <input type="text" id="listId" readonly>
+            <button onclick="CopyListId()" title="Copy Id to Clipboard"><img src="copy.png"></button>
+        </div>
+
+        <label for="boardId">Board Id</label>
+        <div style="display: flex;">
+            <input type="text" id="boardId" readonly>
+            <button onclick="CopyBoardId()" title="Copy Id to Clipboard"><img src="copy.png"></button>
+        </div>
+
+        <label for="listId">JSON</label>
+        <div style="display: flex;">
+            <textarea type="text" id="json" rows="7" readonly></textarea>
+            <button onclick="CopyJson()" style="max-height: 42px;" title="Copy JSON to Clipboard"><img
+                    src="copy.png"></button>
+        </div>
+
+        <label>Card Creation Date: <span style="font-size: 11px; font-weight: normal; color: gray;"
+                id="creationDate"></span></label>
+    </div>
+
+    <div id="Member" style="display: none;">
+        <div id="noMember" style="display: none;">
+            <div style="text-align: center; font-style: italic; margin-top: 25px; margin-bottom: 25px;">
+                No Members on this Card
+            </div>
+        </div>
+        <!-- Dynamic Content -->
+    </div>
+
+    <div id="Label" style="display: none;">
+        <div id="noLabel" style="text-align: center; font-style: italic; display: none;">
+            <div style="text-align: center; font-style: italic; margin-top: 25px; margin-bottom: 25px;">                
+                No Labels on this Card
+            </div>
+        </div>
+        <!-- Dynamic Content -->
+    </div>
+
+    <div id="Checklist" style="display: none;">
+        <div id="noChecklist" style="text-align: center; font-style: italic; display: none;">
+            <div style="text-align: center; font-style: italic; margin-top: 25px; margin-bottom: 25px;">
+                No Checklists on this Card</div>
+        </div>
+        <!-- Dynamic Content -->
+    </div>
+
+    <a class="footer" href="https://trellotools.azurewebsites.net" target="_blank">More Free Developer Tools</a>
 </body>
+
 </html>

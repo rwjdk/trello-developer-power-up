@@ -3,7 +3,7 @@ var PowerUpIconLight = 'https://ambitious-moss-04a010603.3.azurestaticapps.net/p
 
 var btnListPopUp = function (t, opts) {
     return t.popup({
-        title: 'Get Technical List Data',
+        title: 'Get List Information',
         url: 'listPopup.html',
         height: 300
     });
@@ -11,7 +11,7 @@ var btnListPopUp = function (t, opts) {
 
 var btnCardPopUp = function (t, opts) {
     return t.popup({
-        title: 'Get Technical Card Data',
+        title: 'Get Card Information',
         url: 'cardPopup.html',
         height: 300
     });
@@ -19,7 +19,7 @@ var btnCardPopUp = function (t, opts) {
 
 var btnBoardPopUp = function (t, opts) {
     return t.popup({
-        title: 'Get Technical Board Data',
+        title: 'Get Board Information',
         url: 'boardPopup.html',
         height: 300
     });
@@ -35,7 +35,7 @@ window.TrelloPowerUp.initialize({
         if (show) {
             return [
                 {
-                    text: 'Get List Id',
+                    text: 'Get List Info',
                     callback: btnListPopUp
                 }
             ];
@@ -48,7 +48,7 @@ window.TrelloPowerUp.initialize({
         if (show) {
             return [{
                 icon: PowerUpIcon,
-                text: 'Get Card Ids',
+                text: 'Get Card Info',
                 callback: btnCardPopUp,
                 condition: 'always'
             }];
@@ -64,7 +64,7 @@ window.TrelloPowerUp.initialize({
                     dark: PowerUpIconLight,
                     light: PowerUpIcon
                 },
-                text: 'Get Board Id',
+                text: 'Get Board Info',
                 callback: btnBoardPopUp,
                 condition: 'always'
             }];
@@ -74,7 +74,7 @@ window.TrelloPowerUp.initialize({
     },
     'show-settings': function (t) {
         return t.popup({
-            title: 'Get Ids Settings',
+            title: 'Settings',
             url: 'settings.html',
             height: 110
         });

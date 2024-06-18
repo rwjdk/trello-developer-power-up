@@ -1,0 +1,232 @@
+.heading {
+    cursor: pointer;
+}
+
+.heading-selected {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.memberImage {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    margin-right: 3px;
+    margin-bottom: 1px;
+}
+
+input {
+    margin: 0 !important;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+textarea {
+    margin: 0 !important;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 11px;
+    resize: none;
+}
+
+button {
+    margin: 0 !important;
+}
+
+a.footer {
+    display: block;
+    border-top: 1px silver solid;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 0;
+    padding-top: 4px;
+    padding-bottom: 0px;
+    color: gray;
+    text-decoration: none;
+}
+
+a.footer:hover {
+    text-decoration: underline;
+}
+
+.label_purple {
+    color: #352C63;
+    background-color: #9F8FEF;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-weight: bold;
+}
+
+.label_orange {
+    color: #702E00;
+    background-color: #FEA362;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-weight: bold;
+}
+
+.label_orange_light {
+    color: #702E00;
+    background-color: #FEDEC8;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-weight: bold;
+}
+
+.label_black {
+    color: #091E42;
+    background-color: #8590A2;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-weight: bold;
+}
+
+.label_black_dark {
+    color: white;
+    background-color: #626F86;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-weight: bold;
+}
+
+.label_yellow {
+    color: #533F04;
+    background-color: #F5CD47;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-weight: bold;
+}
+
+.label_lime {
+    color: #37471F;
+    background-color: #94C748;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-weight: bold;
+}
+
+.label_green_dark {
+    color: #FFFFFF;
+    background-color: #1F845A;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-weight: bold;
+}
+
+.label_orange_dark {
+    color: #FFFFFF;
+    background-color: #C25100;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-weight: bold;
+}
+
+.label_blue_light {
+    color: #09326C;
+    background-color: #CCE0FF;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-weight: bold;
+}
+
+.label_sky {
+    color: #164555;
+    background-color: #6CC3E0;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-weight: bold;
+}
+
+.label_red {
+    color: #5D1F1A;
+    background-color: #F87168;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-weight: bold;
+}
+
+.label_green {
+    color: #164B35;
+    background-color: #4BCE97;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-weight: bold;
+}
+
+.label_green_light {
+    color: #164B35;
+    background-color: #BAF3DB;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-weight: bold;
+}
+
+.label_lime {
+    color: #164B35;
+    background-color: #4BCE97;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-weight: bold;
+}
+
+.label_lime_light {
+    color: 37471F;
+    background-color: #D3F1A7;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-weight: bold;
+}
+
+.label_blue {
+    color: #09326C;
+    background-color: #579DFF;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-weight: bold;
+}
+
+.label_red_dark {
+    color: #FFFFFF;
+    background-color: #C9372C;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-weight: bold;
+}
+
+.label_blue_dark {
+    color: #FFFFFF;
+    background-color: #0C66E4;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-weight: bold;
+}
+
+.label_pink {
+    color: #50253F;
+    background-color: #E774BB;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-weight: bold;
+}
+
+.label_pink_dark {
+    color: #FFFFFF;
+    background-color: #AE4787;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-weight: bold;
+}
+
+.label_gray {
+    color: black;
+    background-color: silver;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-weight: bold;
+}
+
+.label_white {
+    color: gray;
+    background-color: whitesmoke;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-weight: bold;
+}
