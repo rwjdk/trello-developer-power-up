@@ -31,25 +31,46 @@ button {
     margin: 0 !important;
 }
 
-a.footer {
-    display: block;
+div.footer {
     border-top: 1px silver solid;
     text-align: center;
     margin-top: 5px;
     margin-bottom: 0;
     padding-top: 4px;
     padding-bottom: 0px;
+    font-size: 11px;
+}
+
+div.footer a {
+    
+    
     color: gray;
     text-decoration: none;
 }
 
-a.footer:hover {
+div.footer a:hover {
     text-decoration: underline;
 }
 
 .label_purple {
     color: #352C63;
     background-color: #9F8FEF;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-weight: bold;
+}
+
+.label_purple_light {
+    color: #742C97;
+    background-color: #DFD8FD;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-weight: bold;
+}
+
+.label_purple_dark {
+    color: #FFFFFF;
+    background-color: #6E5DC6;
     padding-left: 7px;
     padding-right: 7px;
     font-weight: bold;
@@ -71,6 +92,14 @@ a.footer:hover {
     font-weight: bold;
 }
 
+.label_black_light {
+    color: #091E42;
+    background-color: #DCDFE4;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-weight: bold;
+}
+
 .label_black {
     color: #091E42;
     background-color: #8590A2;
@@ -87,9 +116,24 @@ a.footer:hover {
     font-weight: bold;
 }
 
+.label_yellow_light {
+    color: #533F04;
+    background-color: #F8E6A0;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-weight: bold;
+}
 .label_yellow {
     color: #533F04;
     background-color: #F5CD47;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-weight: bold;
+}
+
+.label_yellow_dark {
+    color: #FFFFFF;
+    background-color: #946F00;
     padding-left: 7px;
     padding-right: 7px;
     font-weight: bold;
@@ -127,6 +171,14 @@ a.footer:hover {
     font-weight: bold;
 }
 
+.label_sky_light {
+    color: #164555;
+    background-color: #C6EDFB;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-weight: bold;
+}
+
 .label_sky {
     color: #164555;
     background-color: #6CC3E0;
@@ -135,6 +187,21 @@ a.footer:hover {
     font-weight: bold;
 }
 
+.label_sky_dark {
+    color: #FFFFFF;
+    background-color: #227D9B;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-weight: bold;
+}
+
+.label_red_light {
+    color: #5D1F1A;
+    background-color: #FFD5D2;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-weight: bold;
+}
 .label_red {
     color: #5D1F1A;
     background-color: #F87168;
@@ -168,8 +235,16 @@ a.footer:hover {
 }
 
 .label_lime_light {
-    color: 37471F;
+    color: #37471F;
     background-color: #D3F1A7;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-weight: bold;
+}
+
+.label_lime_dark {
+    color: #FFFFFF;
+    background-color: #5B7F24;
     padding-left: 7px;
     padding-right: 7px;
     font-weight: bold;
@@ -194,6 +269,14 @@ a.footer:hover {
 .label_blue_dark {
     color: #FFFFFF;
     background-color: #0C66E4;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-weight: bold;
+}
+
+.label_pink_light {
+    color: #50253F;
+    background-color: #FDD0EC;
     padding-left: 7px;
     padding-right: 7px;
     font-weight: bold;

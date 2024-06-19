@@ -26,7 +26,12 @@ var btnBoardPopUp = function (t, opts) {
 };
 
 async function GetGetShowForSetting(t, setting) {
-    return await t.get('member', 'private', setting, 'true');
+    const personalSetting = await t.get('member', 'private', setting, 'inherit');    
+    if (personalSetting === 'inherit') {
+        const generalSetting = await t.get('board', 'shared', setting+"All", 'true');
+        return generalSetting;
+    }
+    return personalSetting === 'true';
 }
 
 window.TrelloPowerUp.initialize({
