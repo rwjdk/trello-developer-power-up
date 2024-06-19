@@ -31,7 +31,7 @@ async function GetGetShowForSetting(t, setting) {
         const generalSetting = await t.get('board', 'shared', setting+"All", 'true');
         return generalSetting;
     }
-    return personalSetting === 'true';
+    return personalSetting === 'true' || personalSetting === true;
 }
 
 window.TrelloPowerUp.initialize({
