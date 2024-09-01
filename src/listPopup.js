@@ -78,6 +78,7 @@ function BuildCardList(list) {
             memberRoot.appendChild(div)
             const input = document.createElement("input");
             input.style = "margin: 0";
+            input.setAttribute('readonly', true);
             input.type = "text";
             input.id = "card_" + element.id;
             input.value = element.id;

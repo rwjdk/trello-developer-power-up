@@ -41,6 +41,7 @@ function BuildMemberList(board) {
         memberRoot.appendChild(divData)
         const input = document.createElement("input");
         input.type = "text";
+        input.setAttribute('readonly', true);
         input.id = "member_" + element.id;
         input.value = element.id;
         divData.appendChild(input);
@@ -79,6 +80,7 @@ function BuildLabelList(board) {
 
         const input = document.createElement("input");
         input.style = "margin: 0";
+        input.setAttribute('readonly', true);
         input.type = "text";
         input.id = "label_" + element.id;
         input.value = element.id;

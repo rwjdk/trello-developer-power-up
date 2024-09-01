@@ -88,6 +88,7 @@ function BuildMemberList(card) {
             memberRoot.appendChild(divData)
             const input = document.createElement("input");
             input.type = "text";
+            input.setAttribute('readonly', true);
             input.id = "member_" + element.id;
             input.value = element.id;
             divData.appendChild(input);
@@ -132,6 +133,7 @@ function BuildLabelList(card) {
             const input = document.createElement("input");
             input.style = "margin: 0";
             input.type = "text";
+            input.setAttribute('readonly', true);
             input.id = "label_" + element.id;
             input.value = element.id;
             div.appendChild(input);
@@ -173,6 +175,7 @@ function BuildChecklistList(card) {
             const input = document.createElement("input");
             input.style = "margin: 0";
             input.type = "text";
+            input.setAttribute('readonly', true);
             input.id = "checklist_" + element.id;
             input.value = element.id;
             div.appendChild(input);
