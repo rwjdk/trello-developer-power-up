@@ -34,7 +34,7 @@ By default, the Info buttons are shown to all users, but if you like you can hid
 
 ## Version History
 
-### Version 3.0 (14th of September)
+### Version 3.0 (14th of September 2024)
 #### Board Button
 - Added Support for Custom Field Ids
 
