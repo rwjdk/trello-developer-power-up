@@ -14,7 +14,7 @@
         <label id="showBoard" class="heading-selected" onclick="switchView('Board')">Board</label>
         <label id="showMember" class="heading" onclick="switchView('Member')">Members</label>
         <label id="showLabel" class="heading" onclick="switchView('Label')">Labels</label>
-        <label id="showOrg" class="heading" onclick="switchView('Org')">Workspace</label>
+        <label id="showOther" class="heading" onclick="switchView('Other')">Other</label>
     </div>
 
     <div id="Board" style="display: block;">
@@ -43,11 +43,14 @@
         <!-- Dynamic Content -->
     </div>
 
-    <div id="Org" style="display: none;">
+    <div id="Other" style="display: none;">
         <label for="orgId">Workspace Id</label>
         <div style="display: flex;">
             <input type="text" id="orgId" readonly>
             <button onclick="CopyWorkSpaceId()" title="Copy to Clipboard"><img src="copy.png"></button>
+        </div>        
+        <div id="CustomFields" style="display: none;">
+            <!-- Dynamic Content -->
         </div>
     </div>
 

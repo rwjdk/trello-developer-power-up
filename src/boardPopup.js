@@ -10,6 +10,7 @@ t.render(function () {
             document.getElementById('creationDate').innerText = creationDate.toLocaleString();
             BuildMemberList(board);
             BuildLabelList(board)
+            BuildCustomFieldsList(board);
         }).then(function () {
             return t.sizeTo(document.body);
         });;
@@ -61,22 +62,92 @@ function BuildMemberList(board) {
     });
 }
 
+function BuildCustomFieldsList(board) {
+    if (board.customFields.length > 0) {
+        const root = document.getElementById("CustomFields");
+        root.style.display = "block";
+        board.customFields.forEach(element => {
+            const customField = document.createElement("label");
+            customField.style = "margin-bottom: 0;";
+            customField.innerText = "Custom Field: '"+element.name+"' ("+element.type.charAt(0).toUpperCase()+element.type.slice(1)+")";
+            root.appendChild(customField);
+            const div = document.createElement("div");
+            div.style = "display: flex";
+            root.appendChild(div)
+            const input = document.createElement("input");
+            input.style = "margin: 0";
+            input.setAttribute('readonly', true);
+            input.type = "text";
+            input.id = "label_" + element.id;
+            input.value = element.id;
+            div.appendChild(input);
+            const button = document.createElement("button");
+            button.title = "Copy Csutom Field Id to Clipboard";
+            const copyImage = document.createElement("img");
+            copyImage.src = "copy.png";
+            button.appendChild(copyImage);
+            button.addEventListener("click", function () {
+                document.querySelector("#label_" + element.id).select();
+                document.execCommand('copy');
+                t.alert({
+                    message: "Custom Field '"+element.name+"' Id Copied to Clipboard"
+                });
+            });
+            div.appendChild(button);
+            if(element.options)
+            {
+                element.options.forEach(option => {
+                const optionLabel = document.createElement("label");
+                optionLabel.style = "padding-left: 15px; margin: 1px; color: gray";
+                optionLabel.innerText = "Option '"+option.value.text+"'";
+                root.appendChild(optionLabel);
+                const div = document.createElement("div");
+                div.style = "display: flex; padding-left: 15px";
+                root.appendChild(div)
+                const input = document.createElement("input");
+                input.style = "margin: 0; font-size: 12px;";
+                input.setAttribute('readonly', true);
+                input.type = "text";
+                input.id = "label_" + option.id;
+                input.value = option.id;
+                div.appendChild(input);
+                const button = document.createElement("button");
+                button.title = "Copy Option Id to Clipboard";
+                const copyImage = document.createElement("img");
+                copyImage.src = "copy.png";
+                button.appendChild(copyImage);
+                button.addEventListener("click", function () {
+                    document.querySelector("#label_" + option.id).select();
+                    document.execCommand('copy');
+                    t.alert({
+                        message: "Option '"+option.value.text+"' for custom field '"+element.name+"' Id Copied to Clipboard"
+                    });
+                });
+                div.appendChild(button);
+
+                });
+            }
+
+        });
+    }
+}
+
 function BuildLabelList(board) {
-    const memberRoot = document.getElementById("Label");
+    const labelRoot = document.getElementById("Label");
     board.labels.forEach(element => {
         const label = document.createElement("label");
         label.className = "label_" + element.color;
         label.style = "margin-bottom: 0";
         if (element.name === "") {
-            label.innerText = "("+element.color+")";
+            label.innerText = "(" + element.color + ")";
         }
         else {
             label.innerText = element.name;
         }
-        memberRoot.appendChild(label);
+        labelRoot.appendChild(label);
         const div = document.createElement("div");
         div.style = "display: flex";
-        memberRoot.appendChild(div)
+        labelRoot.appendChild(div)
 
         const input = document.createElement("input");
         input.style = "margin: 0";
@@ -126,11 +197,11 @@ function CopyJson() {
 }
 
 function switchView(selected) {
-    document.getElementById('showOrg').className = "heading";
+    document.getElementById('showOther').className = "heading";
     document.getElementById('showBoard').className = "heading";
     document.getElementById('showMember').className = "heading";
     document.getElementById('showLabel').className = "heading";
-    document.getElementById('Org').style = "display: none";
+    document.getElementById('Other').style = "display: none";
     document.getElementById('Board').style = "display: none";
     document.getElementById('Label').style = "display: none";
     document.getElementById('Member').style = "display: none";

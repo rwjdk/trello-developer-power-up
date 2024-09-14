@@ -18,6 +18,7 @@
 input {
     margin: 0 !important;
     font-family: 'Courier New', Courier, monospace;
+    height: 30px;
 }
 
 textarea {
@@ -29,6 +30,7 @@ textarea {
 
 button {
     margin: 0 !important;
+    height: 30px;
 }
 
 div.footer {
