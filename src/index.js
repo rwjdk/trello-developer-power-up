@@ -1,10 +1,12 @@
 var PowerUpIcon = 'https://ambitious-moss-04a010603.3.azurestaticapps.net/power-up-icon.png';
 var PowerUpIconLight = 'https://ambitious-moss-04a010603.3.azurestaticapps.net/power-up-icon_light.png';
 
+var currentlist = null;
+
 var btnListPopUp = function (t, opts) {
     return t.popup({
         title: 'Get List Information',
-        url: 'listPopup.html',
+        url: t.signUrl('listPopup.html?listId=' + encodeURIComponent(currentList)),
         height: 300
     });
 };
@@ -36,6 +38,7 @@ async function GetGetShowForSetting(t, setting) {
 
 window.TrelloPowerUp.initialize({
     'list-actions': async function (t) {
+        currentList = t.getContext().list;
         const show = await GetGetShowForSetting(t, 'showForList');
         if (show) {
             return [

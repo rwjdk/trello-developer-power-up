@@ -1,8 +1,14 @@
 var t = window.TrelloPowerUp.iframe();
 
 t.render(function () {
-    t.list('all')
-        .then(function (list) {
+    const params = new URLSearchParams(window.location.search);
+    const listId = params.get('listId');
+
+    t.lists('id', 'name', 'cards').then(function (lists) {
+        const list = lists.find(function (item) {
+            return item.id === listId;
+        });
+
             document.getElementById('listId').value = list.id;
             document.getElementById('json').value = JSON.stringify(list, null, 2);
             const creationDate = getCreationTimeFromObjectId(list.id);
